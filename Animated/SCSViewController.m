@@ -38,8 +38,11 @@
 						 self.view.transform = CGAffineTransformMakeScale(0.2, 0.1);
 					 }
 					 completion:^(BOOL finished) {
-						 self.view.backgroundColor = [UIColor redColor];
-						 self.view.transform = CGAffineTransformIdentity;
+						 [UIView animateWithDuration:2
+										  animations:^{
+										   self.view.backgroundColor = [UIColor redColor];
+										   self.view.transform = CGAffineTransformIdentity;
+										  }];
 					 }];
 }
 
